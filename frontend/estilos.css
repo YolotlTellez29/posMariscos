@@ -1,0 +1,100 @@
+body {
+  font-family: sans-serif;
+  padding: 30px;
+
+    margin: 0;
+  overflow: hidden;
+}
+html,
+body {
+  height: 100%;
+}
+h2 {
+  background-color: #fff;
+  margin-top: 0 !important;
+}
+.contRel {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+.etiqueta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3a3a3a;
+  padding: 6px 10px;
+  font-size: 1.8rem;
+}
+.btn-continuar {
+  display: block;
+  width: 300px;
+  height: 60px;
+  margin: 40px auto 0;
+  /* top auto bottom */
+  font-size: 18px;
+  background-color: #8fa1fa;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.text-gray-700 {
+  font-size: 30px;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #343a40;
+  width: 4.5rem;
+  transition: width 0.3s;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+
+.sidebar:hover {
+  width: 200px;
+}
+
+.sidebar .nav-link {
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #495057;
+}
+
+.sidebar .nav-link i {
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.sidebar .nav-text {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sidebar:hover .nav-text {
+  opacity: 1;
+}
+
+.content {
+  margin-left: 4.5rem;
+  padding: 2rem;
+  height: 100vh;
+  overflow-y: auto;
+  transition: margin-left 0.3s;
+}
+
+.sidebar:hover~.content {
+  margin-left: 200px;
+}
