@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "nombre": "coctel",
+        "precio": 50,
+        "imagen": "https:\/\/tse1.mm.bing.net\/th\/id\/OIP.HvrXR1ZxJhFYBZjGdBuQdgHaE8?pid=Api&P=0&h=180"
+    },
+    {
+        "id": 2,
+        "nombre": "mojarra",
+        "precio": 80,
+        "imagen": "https:\/\/www.laprensagrafica.com\/__export\/1555307890520\/sites\/prensagrafica\/img\/2019\/04\/14\/20190414_115809561_fviv13042019shusalud30.jpg_423682103.jpg"
+    }
+]

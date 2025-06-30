@@ -1,0 +1,123 @@
+[
+    {
+        "mesa": "T1",
+        "items": [
+            {
+                "nombre": "coctel",
+                "cantidad": "2",
+                "precio": 50,
+                "total": 100
+            }
+        ],
+        "total": 100,
+        "fecha": "2025-06-30",
+        "hora": "04:45:15",
+        "ticket_id": 1751251515
+    },
+    {
+        "mesa": "T1",
+        "items": [
+            {
+                "nombre": "coctel",
+                "cantidad": "2",
+                "precio": 50,
+                "total": 100
+            }
+        ],
+        "total": 100,
+        "fecha": "2025-06-30",
+        "hora": "04:54:50",
+        "ticket_id": 1751252090
+    },
+    {
+        "mesa": "T1",
+        "items": [
+            {
+                "nombre": "coctel",
+                "cantidad": "1",
+                "precio": 50,
+                "total": 50
+            }
+        ],
+        "total": 50,
+        "fecha": "2025-06-30",
+        "hora": "05:04:28",
+        "ticket_id": 1751252668
+    },
+    {
+        "mesa": "T1",
+        "items": [],
+        "total": 0,
+        "fecha": "2025-06-30",
+        "hora": "05:09:44",
+        "ticket_id": 1751252984
+    },
+    {
+        "mesa": "T4",
+        "items": [
+            {
+                "nombre": "coctel",
+                "cantidad": "3",
+                "precio": 50,
+                "total": 150
+            }
+        ],
+        "total": 150,
+        "fecha": "2025-06-30",
+        "hora": "05:23:02",
+        "ticket_id": 1751253782
+    },
+    {
+        "mesa": "T1",
+        "items": [
+            {
+                "nombre": "coctel",
+                "cantidad": "2",
+                "precio": 50,
+                "total": 100
+            }
+        ],
+        "total": 100,
+        "fecha": "2025-06-30",
+        "hora": "05:31:29",
+        "ticket_id": 1751254289
+    },
+    {
+        "mesa": "T2",
+        "items": [
+            {
+                "nombre": "coctel",
+                "cantidad": "3",
+                "precio": 50,
+                "total": 150
+            }
+        ],
+        "total": 150,
+        "fecha": "2025-06-30",
+        "hora": "05:31:36",
+        "ticket_id": 1751254296
+    },
+    {
+        "mesa": "T1",
+        "items": [
+            {
+                "nombre": "coctel",
+                "cantidad": "4",
+                "precio": 50,
+                "total": 200
+            }
+        ],
+        "total": 200,
+        "fecha": "2025-06-30",
+        "hora": "05:32:02",
+        "ticket_id": 1751254322
+    },
+    {
+        "mesa": "T1",
+        "items": [],
+        "total": 0,
+        "fecha": "2025-06-30",
+        "hora": "05:33:27",
+        "ticket_id": 1751254407
+    }
+]

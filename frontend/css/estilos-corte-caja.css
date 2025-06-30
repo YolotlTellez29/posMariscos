@@ -1,0 +1,58 @@
+/* estilos.css */
+
+/* Estilo general del cuerpo */
+body {
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título principal */
+h2 {
+  font-weight: bold;
+  color: #859dc0;
+}
+
+/* Tarjeta del corte */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Encabezado de la tarjeta */
+.card-header {
+  font-size: 1.2rem;
+}
+
+/* Celdas de tabla */
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Campos de entrada */
+input[type="date"],
+input[type="number"] {
+  border-radius: 8px;
+}
+
+/* Botones */
+button {
+  border-radius: 8px;
+}
+
+/* Total final destacado */
+.text-success {
+  font-size: 1.3rem;
+}
+.corte-caja-card {
+  max-width: 600px;
+  margin-left: 700;          
+  margin-right: 0;     
+}
+.input-color-custom {
+  background-color: #f0f8ff; /* fondo celeste claro */
+  color: #080808; /* texto azul marino */
+ 
+}
+
+

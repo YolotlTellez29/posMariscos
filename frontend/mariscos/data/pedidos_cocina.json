@@ -1,0 +1,20 @@
+[
+    {
+        "mesa": "T3",
+        "platillo": "Tacos al pastor",
+        "cantidad": 2,
+        "estado": "entregado",
+        "hora": "13:45:22",
+        "fecha": "2025-06-29",
+        "ticket_id": 1720004722
+    },
+    {
+        "mesa": "T5",
+        "platillo": "Enchiladas verdes",
+        "cantidad": 1,
+        "estado": "entregado",
+        "hora": "13:47:01",
+        "fecha": "2025-06-29",
+        "ticket_id": 1720004821
+    }
+]
