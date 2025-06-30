@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #004085;
+}
+
+.mensaje {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.form-agregar {
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+
+.form-agregar label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.form-agregar input[type="text"],
+.form-agregar input[type="number"],
+.form-agregar input[type="url"] {
+    width: 100%;
+    padding: 7px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-agregar button {
+    background-color: #004085;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-agregar button:hover {
+    background-color: #002752;
+}
+
+.lista-platillos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.platillo-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 180px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgb(0 0 0 / 0.1);
+}
+
+.platillo-card img {
+    max-width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #004085;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

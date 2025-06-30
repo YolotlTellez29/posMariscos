@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mesayordenes</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+
+
+    <!-- Font Awesome (iconos, si los usas) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-papJfVjIxJjBY6KK+p0Q+xCHG3DjoKqNkBzOQ0+YV1+2zJk8lyKmE7ipFJQvyeFPr6PY1wJkYIcGzYzHZ7YPyw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Select2 CSS (si usas select2 en algún lugar) -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar d-flex flex-column p-2">
+        <a href="#" class="nav-link d-flex align-items-center mb-2">
+            <i class="bi bi-house-door-fill"></i>
+            <span class="nav-text">Inicio</span>
+        </a>
+        <a href="#" class="nav-link d-flex align-items-center mb-2">
+            <i class="bi bi-people-fill"></i>
+            <span class="nav-text">Clientes</span>
+        </a>
+        <a href="#" class="nav-link d-flex align-items-center mb-2">
+            <i class="bi bi-gear-fill"></i>
+            <span class="nav-text">Configuración</span>
+        </a>
+    </div>
+    <!-- Contenido principal -->
+    <div class="content">
+        <section id="sec_Mesas" class="section">
+            <h2 class="title has-text-centered">MESAS</h2>
+            <div class="flex max-w-7xl mx-auto h-screen p-4 gap-4">
+
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="flex-1 flex flex-col border rounded-lg overflow-hidden bg-white max-h-[80vh]">
+
+
+                    <!-- CONTENEDOR SCROLL DE PRODUCTOS -->
+                    <div class="flex-1 overflow-y-auto p-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <!-- MESA -->
+
+                        <div id="ir_a_Mesa1" class="cont-mesa column is-4 cursor-pointer" onclick="seleccionarMesa(1)">
+                            <div class="mesa contRel">
+                                <img src="img/mesa.png" alt="">
+                                <div class="etiqueta">T1</div>
+                            </div>
+                        </div>
+
+                        <div id="ir_a_Mesa2" class="cont-mesa column is-4 cursor-pointer" onclick="seleccionarMesa(2)">
+                            <div class="mesa contRel">
+                                <img src="img/mesa.png" alt="">
+                                <div class="etiqueta">T2</div>
+                            </div>
+                        </div>
+                        <div id="ir_a_Mesa3" class="cont-mesa column is-4 cursor-pointer" onclick="seleccionarMesa(3)">
+                            <div class="mesa contRel">
+                                <img src="img/mesa.png" alt="">
+                                <div class="etiqueta">T3</div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- BOTONES FIJOS ABAJO -->
+                    <div class="sticky bottom-0 bg-white border-t p-3 z-10">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                            <div class="flex items-center gap-2 mb-2">
+                                <!-- Icono de mesa -->
+                                <span class="material-symbols-outlined text-gray-600">table_restaurant</span>
+                                <label>Mesa:</label>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <!-- Icono de cliente -->
+                                <span class="material-symbols-outlined text-gray-600">group</span>
+                                <label>Clientes:</label>
+                            </div>
+
+                            <button class="bg-yellow-400 text-white py-2  rounded hover:bg-yellow-500">Seleccionar y
+                                continuar</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN DERECHA (S2) -->
+                <div class="w-72 bg-white rounded-lg shadow p-4 h-fit sticky top-6 self-start min-h-[500px]">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OCULTO AL PRINC-->
+        <section id="sec_Ordenes" class="hidden">
+            <h2 class="title has-text-centered">ORDENES</h2>
+            <div class="flex max-w-7xl mx-auto h-screen p-4 gap-4">
+
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="flex-1 flex flex-col border rounded-lg overflow-hidden bg-white max-h-[80vh]">
+
+                    <!-- CONTENEDOR SCROLL DE PRODUCTOS -->
+                    <div class="flex-1 overflow-y-auto p-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                        <!-- Mesa 1 -->
+                        <div class="bg-white rounded p-2 h-auto" onclick="clickeaProducto(1)">
+                            <div class="border p-3 rounded shadow">
+                                <img src="img/orden.png" alt="Producto" class="w-full h-32 object-cover rounded mb-2">
+                                <h3 id="id_nombre_producto1" class="font-bold">Producto</h3>
+                                <p id="id_cant_precio1" class="text-sm text-gray-600">$20</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded p-2 h-auto" onclick="clickeaProducto(2)">
+                            <div class="border p-3 rounded shadow">
+                                <img src="img/orden.png" alt="Producto" class="w-full h-32 object-cover rounded mb-2">
+                                <h3 id="id_nombre_producto2" class="font-bold">Pan</h3>
+                                <p id="id_cant_precio2" class="text-sm text-gray-600">$25</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded p-2 h-auto" onclick="clickeaProducto(3)">
+                            <div class="border p-3 rounded shadow">
+                                <img src="img/orden.png" alt="Producto" class="w-full h-32 object-cover rounded mb-2">
+                                <h3 id="id_nombre_producto3" class="font-bold">Camaron</h3>
+                                <p id="id_cant_precio3" class="text-sm text-gray-600">$25</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- BOTONES FIJOS ABAJO -->
+                    <div class="sticky bottom-0 bg-white border-t p-3 shadow-inner z-10">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                            <button class="bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Entradas</button>
+                            <button class="bg-green-600 text-white py-2 opacity-50 rounded cursor-not-allowed"
+                                disabled>Platos
+                                fuertes</button>
+                            <button class="bg-yellow-500 text-white py-2 opacity-50 rounded cursor-not-allowed"
+                                disabled>Postres</button>
+                            <button class="bg-red-500 text-white py-2 opacity-50 rounded cursor-not-allowed"
+                                disabled>Bebidas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN DERECHA (S2) -->
+                <div class="w-72 bg-white rounded-lg shadow p-4 h-fit sticky top-6 self-start min-h-[600px]">
+
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="material-symbols-outlined text-gray-600">table_restaurant</span>
+                        <label id="labelMesa">Mesa:</label>
+                    </div>
+                    <h2 class="text-xl font-semibold mb-3">Orden Actual</h2>
+                    <ul class="text-gray-700 text-sm space-y-2">
+                        <ul id="lista_ordenes">
+                            <li> <span class="font-semibold">Producto Cantidad Precio</span> </li>
+                        </ul>
+
+
+
+
+                    </ul>
+                    <div class="mt-4 border-t pt-2 text-right font-semibold text-lg">
+                        Total: $34
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!-- TAbla -->
+
+
+
+
+        <!-- orDENES -->
+        <section id="sec_Mesas" class="section">
+            <h2 class="title has-text-centered">ORDENES</h2>
+            <div class="flex max-w-7xl mx-auto h-screen p-4 gap-4">
+
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="flex-1 flex flex-col border rounded-lg overflow-hidden bg-white max-h-[80vh]">
+
+
+                    <!-- CONTENEDOR SCROLL DE PRODUCTOS -->
+                    <div class="flex-1 overflow-y-auto p-4">
+                        <!-- MESA -->
+
+                        <table class="min-w-full border-collapse border border-gray-300">
+                            <thead>
+                                <tr class="bg-gray-200">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Producto</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Precio</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Cantidad</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="border border-gray-300 px-4 py-2">Tiger Nixon</td>
+                                    <td class="border border-gray-300 px-4 py-2">&90</td>
+                                    <td class="border border-gray-300 px-4 py-2">1</td>
+                                    <td class="border border-gray-300 px-4 py-2">$320,800</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100 bg-gray-50">
+                                    <td class="border border-gray-300 px-4 py-2">Garrett Winters</td>
+                                    <td class="border border-gray-300 px-4 py-2">$20</td>
+                                    <td class="border border-gray-300 px-4 py-2">3</td>
+                                    <td class="border border-gray-300 px-4 py-2">$170,750</td>
+                                </tr>
+                                
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sticky bottom-0 bg-white border-t p-3 shadow-inner z-10">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                            <button class="bg-red-400 text-white py-2 rounded hover:bg-red-500">CANCELAR</button>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SECCIÓN DERECHA (S2) -->
+                <div class="w-72 bg-white rounded-lg shadow p-4 h-fit sticky top-6 self-start min-h-[600px]">
+
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="material-symbols-outlined text-gray-600">table_restaurant</span>
+                        <label id="labelMesa">Mesa:</label>
+                    </div>
+                    <h2 class="text-xl font-semibold mb-3">Monto a pagar</h2>
+                    <ul class="text-gray-700 text-sm space-y-2">
+                        <ul id="lista_ordenes">
+                            <li> <span class="font-semibold">Subtotal:</span> </li>
+                            <li> <span class="font-semibold">Tips:</span> </li>
+                        </ul>
+                    </ul>
+                    <div class="mt-4 border-t pt-2 text-right font-semibold text-lg">
+                        Total: $34
+                    </div>
+
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <button
+                            class="col-span-2 md:col-span-4 w-full bg-green-400 text-white py-2 rounded hover:bg-red-500">
+                            PAGAR AHORA
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+    <script>
+        function seleccionarMesa(mesaId) {
+            const ordenes = document.getElementById("sec_Ordenes");
+            const label = document.getElementById("labelMesa");
+
+            // Cambiar texto de la mesa
+            label.textContent = "Mesa: " + mesaId;
+
+            // Mostrar sección de órdenes
+            ordenes.classList.remove("hidden");
+
+            // Ocultar sección de mesas
+            ocultaMesas();
+
+            // Hacer scroll hacia la sección de órdenes
+            ordenes.scrollIntoView({ behavior: "smooth" });
+        }
+
+        function ocultaMesas() {
+            const mesas = document.getElementById("sec_Mesas");
+            mesas.classList.add("hidden");
+        }
+
+
+
+
+        function clickeaProducto(productoId) {
+            const nombreProducto = document.getElementById("id_nombre_producto" + productoId).textContent;
+            const precioTexto = document.getElementById("id_cant_precio" + productoId).textContent;
+
+            // Eliminar el símbolo de pesos y convertir a número
+            const precio = parseFloat(precioTexto.replace(/[^0-9.]/g, ''));
+
+            if (isNaN(precio)) {
+                alert("Precio inválido");
+                return;
+            }
+
+            const lista = document.getElementById("lista_ordenes");
+            const items = lista.getElementsByTagName("li");
+
+            let encontrado = false;
+
+            for (let i = 0; i < items.length; i++) {
+                let item = items[i];
+
+                if (item.dataset.nombre === nombreProducto) {
+                    let cantidad = parseInt(item.dataset.cantidad) + 1;
+                    item.dataset.cantidad = cantidad;
+
+                    item.innerHTML = `
+                <span class="font-semibold">${nombreProducto}</span>
+                <span>Cant. ${cantidad}</span>
+                <span>$${(precio * cantidad).toFixed(2)}</span>
+            `;
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (!encontrado) {
+                const li = document.createElement("li");
+                li.dataset.nombre = nombreProducto;
+                li.dataset.cantidad = 1;
+                li.className = "bg-blue-10 border-l-4 border-red-300 text-blue-800 p-3 rounded  flex justify-between items-center text-sm";
+                li.innerHTML = `
+            <span class="font-semibold">${nombreProducto}</span>
+            <span>Cant. 1</span>
+            <span>$${precio.toFixed(2)}</span>
+        `;
+                lista.appendChild(li);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

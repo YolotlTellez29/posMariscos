@@ -1,0 +1,30 @@
+.ticket {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Ocultar todo excepto el ticket al imprimir */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .ticket, .ticket * {
+        visibility: visible;
+    }
+
+    .ticket {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+}
